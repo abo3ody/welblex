@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+   color: #e4e5ea;
+   background: #0e1014;
+}
+
+.left-blur {
+   width: 311px;
+   height: 311px;
+   flex-shrink: 0;
+   border-radius: 311px;
+   opacity: 0.5;
+   background: #961a1a;
+   filter: blur(196px);
+}
+
+.purple-ball {
+   width: 60px;
+   height: 60px;
+   flex-shrink: 0;
+
+   background: radial-gradient(
+      82.3% 82.3% at 27.25% 26.5%,
+      rgba(236, 208, 255, 0.64) 0%,
+      rgba(161, 93, 207, 0.24) 59.67%,
+      rgba(118, 49, 164, 0.21) 78.59%,
+      rgba(86, 24, 128, 0.23) 100%
+   );
+
+   filter: drop-shadow(3px 6px 27px rgba(177, 118, 217, 0.25)) blur(5px);
+   backdrop-filter: blur(2px);
+}
+
+.red-ball {
+   top: 83px;
+   left: 519px;
+   width: 83px;
+   height: 83px;
+   flex-shrink: 0;
+   background: radial-gradient(
+      82.3% 82.3% at 27.25% 26.5%,
+      rgba(255, 208, 208, 0.54) 0%,
+      rgba(212, 93, 93, 0.26) 59.67%,
+      rgba(167, 49, 49, 0.25) 78.59%,
+      rgba(130, 25, 25, 0.25) 100%
+   );
+
+   filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
+   backdrop-filter: blur(2px);
 }
